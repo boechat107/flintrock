@@ -6,7 +6,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setuptools.setup(
-    name='Flintrock',
+    name='Flintrock_custom',
     version=__version__,
     description='A command-line tool for launching Apache Spark clusters.',
     long_description=long_description,
