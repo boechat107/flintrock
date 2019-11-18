@@ -51,7 +51,7 @@ setuptools.setup(
     # For example: https://github.com/paramiko/paramiko/issues/615
     install_requires=[
         'boto3 == 1.9.197',
-        'botocore == 1.12.197',
+        'botocore == 1.12.253',
         'click == 7.0',
         'paramiko == 2.6.0',
         'PyYAML == 5.1.1',
