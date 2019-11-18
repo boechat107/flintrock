@@ -93,7 +93,7 @@ class EC2Cluster(FlintrockCluster):
     @property
     def master_host(self):
         instance = self.master_instance
-        return (instance.private_dns_address if self.subnet_is_private else
+        return (instance.private_dns_name if self.subnet_is_private else
                 instance.public_dns_name)
 
     @property
@@ -104,7 +104,7 @@ class EC2Cluster(FlintrockCluster):
 
     @property
     def slave_hosts(self):
-        get_dns = ((lambda i: i.private_dns_address) if self.subnet_is_private
+        get_dns = ((lambda i: i.private_dns_name) if self.subnet_is_private
                    else (lambda i: i.public_dns_name))
         return [get_dns(i) for i in self.slave_instances]
 
